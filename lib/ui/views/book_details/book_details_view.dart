@@ -22,10 +22,24 @@ class BookDetailsView extends StackedView<BookDetailsViewModel> {
           onPressed: viewModel.navigateToBooks,
           icon: const Icon(Icons.arrow_back),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.favorite),
+          )
+        ],
       ),
       body: Container(
+        height: double.infinity,
         padding: const EdgeInsets.only(left: 25.0, right: 25.0),
-        child: Text(book.description ?? "No Description"),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Image.network(book.imageLinks!.thumbnail),
+              Text(book.description ?? "No Description"),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -1,3 +1,4 @@
-# observable_flutter
+# Simple Stacked app using the stacked architecture
 
-A new Flutter project.
+### The app uses googleapsi books endpoint and then also shows the api results in relevant screens.
+
